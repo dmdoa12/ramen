@@ -13,6 +13,7 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
 	integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
 	crossorigin="anonymous">
+<link rel="stylesheet" href="lib/css/animate.min.css">
 <style>
 html, body {
 	height: 100%;
@@ -25,11 +26,19 @@ html, body {
 .carousel-inner {
 	height: 100%;
 }
+
+.hidden {
+	opacity: 0;
+}
+
+.visible {
+	opacity: 1;
+}
 </style>
 </head>
 <body>
 	<!-- 네비게이션 바 -->
-	<nav class="navbar navbar-dark bg-inverse">
+	<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
 		<a class="navbar-brand" href="#">Navbar</a>
 		<ul class="nav navbar-nav">
 			<li class="nav-item active"><a class="nav-link" href="#">Home
@@ -67,22 +76,28 @@ html, body {
 			<div class="carousel-item active">
 				<img src="lib/img/ramen2.jpg" alt="First slide">
 				<div class="carousel-caption">
-						<h1 class="display-3">hello</h3>
-						<p>hi</p>
+					<h2 class="animated bounce">
+						라면 스토리에 오신걸 환영합니다.<br>
+					</h2>
+					<p>여러가지 라면을 볼 수 있는 사이트 입니다.</p>
 				</div>
 			</div>
 			<div class="carousel-item">
 				<img src="lib/img/ramen.jpg" alt="Second slide">
 				<div class="carousel-caption">
-					<h3>hello</h3>
-					<p>hi</p>
+					<h2 class="animated bounce">
+						라면 스토리에 오신걸 환영합니다.<br>
+					</h2>
+					<p>여러가지 라면을 볼 수 있는 사이트 입니다.</p>
 				</div>
 			</div>
 			<div class="carousel-item">
 				<img src="lib/img/ramen3.jpg" alt="Third slide">
 				<div class="carousel-caption">
-					<h3>hello</h3>
-					<p>hi</p>
+					<h2 class="animated bounce">
+						라면 스토리에 오신걸 환영합니다.<br>
+					</h2>
+					<p>여러가지 라면을 볼 수 있는 사이트 입니다.</p>
 				</div>
 			</div>
 		</div>
@@ -95,6 +110,14 @@ html, body {
 		</a>
 	</div>
 
+	<div class="row" style="height: 100%;">
+		<div class="container">
+			<h1 class="display-3 post">
+				<br>세상에는 많은 라면이 있습니다.
+			</h1>
+			<p class="lead post">이 홈페이지는 라면을 소개하기 위해 제작되었습니다.</p>
+		</div>
+	</div>
 
 	<!-- jQuery first, then Tether, then Bootstrap JS. -->
 	<script
@@ -109,5 +132,17 @@ html, body {
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"
 		integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
 		crossorigin="anonymous"></script>
+	<script src="lib/js/jquery.viewportchecker.js"></script>
+	<script>
+		$('.carousel').carousel({
+			interval : 6000
+		});
+		jQuery(document).ready(function() {
+		    jQuery('.post').addClass("hidden").viewportChecker({
+		        classToAdd:'visible animated bounceInLeft',
+		        offset:100
+		       });
+		});
+	</script>
 </body>
 </html>
