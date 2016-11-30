@@ -146,7 +146,7 @@ html, body {
 			</div>
 		</div>
 	</div>
-
+	
 	<!-- jQuery first, then Tether, then Bootstrap JS. -->
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
