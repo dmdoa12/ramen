@@ -39,7 +39,7 @@ html, body {
 <body>
 	<!-- 네비게이션 바 -->
 	<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand" href="index.jsp">라면 스토리</a>
 		<ul class="nav navbar-nav">
 			<li class="nav-item active"><a class="nav-link" href="#">Home
 					<span class="sr-only">(current)</span>
@@ -109,13 +109,41 @@ html, body {
 			aria-hidden="true"></span> <span class="sr-only">Next</span>
 		</a>
 	</div>
-
-	<div class="row" style="height: 100%;">
-		<div class="container">
-			<h1 class="display-3 post">
-				<br>세상에는 많은 라면이 있습니다.
-			</h1>
-			<p class="lead post">이 홈페이지는 라면을 소개하기 위해 제작되었습니다.</p>
+	
+	<!-- Content1 -->
+	<div class="container" style="height: 100%;">
+		<h1 class="display-3 post">
+			<br>세상에는 많은 라면이 있습니다.
+		</h1>
+		<p class="lead post">이 홈페이지는 라면을 소개하기 위해 제작되었습니다.</p>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="card post">
+					<img class="card-img-top" src="lib/img/ramen5.png"
+						alt="Card image cap">
+					<div class="card-block">
+						<p class="card-text">신라면</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card post">
+					<img class="card-img-top" src="lib/img/ramen6.jpg"
+						alt="Card image cap">
+					<div class="card-block">
+						<p class="card-text">짜왕</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card post">
+					<img class="card-img-top" src="lib/img/ramen7.jpg"
+						alt="Card image cap">
+					<div class="card-block">
+						<p class="card-text">불닭 볶음면</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -138,10 +166,10 @@ html, body {
 			interval : 6000
 		});
 		jQuery(document).ready(function() {
-		    jQuery('.post').addClass("hidden").viewportChecker({
-		        classToAdd:'visible animated bounceInLeft',
-		        offset:100
-		       });
+			jQuery('.post').addClass("hidden").viewportChecker({
+				classToAdd : 'visible animated bounceInLeft',
+				offset : 100
+			});
 		});
 	</script>
 </body>
